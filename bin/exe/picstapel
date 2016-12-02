@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+require_relative '../../lib/picstapel'
+
+#Getting keywords from command line and generating an array of 10 keywords
+keyword = Picstapel::Keyword.new
+keywords = keyword.generate_keywords
+
+#Creating an array of urls for keyword related images.
+pic = Picstapel::Pic.new
+url_list = pic.get_image_urls_for_keywords(keywords)
+
+#Cropping images and adding to collage
+collage = Picstapel::Collage.new
+collage.create_collage(url_list,keywords)
+collage.delete_images
+
+
+
