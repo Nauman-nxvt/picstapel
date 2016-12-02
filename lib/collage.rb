@@ -10,7 +10,7 @@ module Picstapel
       # Crop images and add to collage
       url_list.each_with_index do |val, index|
         open(val) do|f|
-          File.open("./lib/img/#{keywords[index]}.jpg","wb") do |file|
+          File.open("lib/img/#{keywords[index]}.jpg","wb") do |file|
             file.puts f.read
             crop_img = Magick::Image.read(file.path).first.crop_resized(300, 250, gravity=Magick::CenterGravity)
             collage.composite!(crop_img,   x,   y, OverCompositeOp)
@@ -28,7 +28,7 @@ module Picstapel
     end
 
     def delete_images
-      FileUtils.rm_f Dir.glob("./lib/img/*")
+      FileUtils.rm_rf Dir.glob("lib/img/*")
     end
 
   end
