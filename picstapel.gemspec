@@ -11,9 +11,9 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Collage generator.}
   spec.description   = %q{Enter up to 10 keywords and generate a collage by using images from Flickr.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage      = "https://github.com/Nauman-nxvt/picstapel"
   spec.license       = "MIT"
-  
+
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})
