@@ -1,6 +1,6 @@
 # Picstapel
 
-Picstapel is a Ruby command line gem to create a collage of images based on 10 user supplied keywords.  
+Picstapel is a Ruby command line gem to create a collage of images based on user supplied keywords.  
 
 ## Installation
 
