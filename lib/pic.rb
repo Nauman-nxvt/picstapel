@@ -8,7 +8,6 @@ module Picstapel
     def get_image_urls_for_keywords(keywords)
       url_list= []
       keywords.each_with_index do |word, index|
-        #binding.pry
         image = flickr.photos.search(tags: word, media: 'photos', per_page: 1, 'dimension_search_mode': 'min', 'height': 500, 'width': 500) #, extras: 'url_o'
         unless image.first.nil?
           url_list << "http://farm#{image.first.farm}.static.flickr.com/#{image.first.server}/#{image.first.id}_#{image.first.secret}.jpg"
